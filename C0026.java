@@ -53,7 +53,7 @@ public class C0026
             int right = Q.length-1;
             int mid = (left + right)/2;
 
-            while ( left < mid || mid < right )
+            while ( left < right )
             {
                 if ( P[i] < Q[mid] )
                 {
@@ -64,46 +64,25 @@ public class C0026
                     break;
                 else if ( Q[mid] < P[i] )
                 {
-
                     left = mid + 1;
                     mid = (left + right)/2;
                 }
             }
 
-            int d = Math.abs(P[i] - Q[mid]);
-
-            if ( d < min )
+            for (int j=mid-1; j<=mid+1; j++)
             {
-                min = d;
-                count = 1;
-            }
-            else if ( d == min )
-                count++;
-            
-            if ( mid-1 >= 0)
-            {
-                d = Math.abs(P[i] - Q[mid-1]);
-
-                if ( d < min )
+                if ( 0 <=j && j <= Q.length-1 )
                 {
-                    min = d;
-                    count = 1;
-                }
-                else if ( d == min )
-                    count++;
-            }
+                    int d = Math.abs(P[i] - Q[j]);
 
-            if ( mid + 1 <= Q.length-1 )
-            {
-                d = Math.abs(P[i] - Q[mid+1]);
-
-                if ( d < min )
-                {
-                    min = d;
-                    count = 1;
+                    if ( d < min )
+                    {
+                        min = d;
+                        count = 1;
+                    }
+                    else if ( d == min )
+                        count++;
                 }
-                else if ( d == min )
-                    count++;
             }
         }
 
