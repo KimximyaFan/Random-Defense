@@ -8,7 +8,7 @@ public class C0032
         BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder s = new StringBuilder("");
         int N = Integer.parseInt(input.readLine());
-        int mid = N/2;
+        int mid = N/2; 
 
         if ( N == 1 )
         {
