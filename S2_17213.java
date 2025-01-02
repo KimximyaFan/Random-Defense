@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class C_17213 
+public class S2_17213 
 {
     public static void main (String[] args) throws IOException
     {
