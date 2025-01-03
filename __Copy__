@@ -6,7 +6,7 @@ public class C_0
     public static void main (String[] args) throws IOException
     {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuffer sb = new StringBuffer();
         StringTokenizer st;
     }
 }
