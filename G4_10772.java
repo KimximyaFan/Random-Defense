@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class _10772
+public class G4_10772
 {
     public static void main (String[] args) throws IOException
     {
