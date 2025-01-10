@@ -6,7 +6,7 @@ public class _0
     public static void main (String[] args) throws IOException
     {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         StringTokenizer st;
     }
 }
