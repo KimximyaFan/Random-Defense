@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class _15812
+public class S2_15812
 {
     static class Node
     {
