@@ -9,7 +9,7 @@ public class G3_11690
 
         long N = Integer.parseInt(input.readLine());
 
-        ArrayList<Long> prime = Sieve_Of_Eratosthenes((int)N);
+        ArrayList<Integer> prime = Sieve_Of_Eratosthenes((int)N);
 
         long divider = 4294967296L;
         long ans = 1L;
@@ -33,9 +33,9 @@ public class G3_11690
         System.out.print(ans);
     }
 
-    static ArrayList<Long> Sieve_Of_Eratosthenes (int N)
+    static ArrayList<Integer> Sieve_Of_Eratosthenes (int N)
     {
-        ArrayList<Long> al = new ArrayList<>();
+        ArrayList<Integer> al = new ArrayList<>();
         boolean[] check = new boolean[N+1];
 
         for (int i=2; i*i<=N; i++)
@@ -50,7 +50,7 @@ public class G3_11690
         for (int i=2; i<=N; i++)
         {
             if ( check[i] == false )
-                al.add((long)i);
+                al.add(i);
         }
 
         return al;
