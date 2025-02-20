@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class _17270
+public class G3_17270
 {
     static class Pair implements Comparable<Pair>
     {
