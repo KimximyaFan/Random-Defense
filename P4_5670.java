@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class _5670
+public class P4_5670
 {
     public static void main (String[] args) throws IOException
     {
