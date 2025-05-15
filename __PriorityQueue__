@@ -1,0 +1,2 @@
+PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+PriorityQueue<Integer> pq = new PriorityQueue<>();
