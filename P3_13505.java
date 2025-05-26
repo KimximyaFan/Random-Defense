@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class _13505
+public class P3_13505
 {
     public static void main (String[] args) throws IOException
     {
