@@ -1,2 +1,7 @@
 PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+// 내림차순, 오름차순 바꾸려면 b a 순서 바꾸면됨됨
+PriorityQueue<Item> pq = new PriorityQueue<>(
+            (a, b) -> Integer.compare(b.getValue(), a.getValue())
+        );
