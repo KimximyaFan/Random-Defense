@@ -1,14 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-public class _25168
+public class G3_25168
 {
-    static class Vaccine
-    {
-        int u, vaccine_day;
-        Vaccine(int u, int vaccine_day) {this.u = u; this.vaccine_day = vaccine_day; }
-    }
-
     static class Pair
     {
         int v, w;
@@ -18,7 +12,6 @@ public class _25168
     public static void main (String[] args) throws IOException
     {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
         StringTokenizer st;
 
         st = new StringTokenizer(input.readLine());
@@ -50,35 +43,39 @@ public class _25168
 
     static int Topology_Sort(int N, int[] degree, ArrayList<Pair>[] G)
     {
-        Queue<Vaccine> Q = new LinkedList<>();
-        int day = 1;
+        Queue<Integer> Q = new LinkedList<>();
+        int[] day = new int[N+1];
+        int ans = 1;
 
         for (int i=1; i<=N; i++)
         {
             if ( degree[i] == 0 )
-                Q.add( new Vaccine(i, day) );
+            {
+                Q.add( i );
+                day[i] = 1;
+            }
+                
         }
 
         while ( !Q.isEmpty() )
         {
-            Vaccine current_Vaccine = Q.poll();
-            int u = current_Vaccine.u;
-            int vaccine_day = current_Vaccine.vaccine_day;
+            int u = Q.poll();
+            ans = Math.max(ans, day[u]);
 
             for (int i=0; i<G[u].size(); i++)
             {
                 int v = G[u].get(i).v;
-                int w = G[u].get(i).w >= 7 ? 8 : G[u].get(i).w;
+                int w = G[u].get(i).w <= 6 ? G[u].get(i).w : G[u].get(i).w + 1;
 
                 degree[v]--;
 
-                day = Math.max(day, vaccine_day + w);
+                day[v] = Math.max(day[v], day[u] + w);
 
                 if ( degree[v] == 0 )
-                    Q.add( new Vaccine(v, day) );
+                    Q.add( v );
             }
         }
 
-        return day;
+        return ans;
     }
 }
