@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class _13421
+public class G2_13421
 {
     static long min = 0;
 
