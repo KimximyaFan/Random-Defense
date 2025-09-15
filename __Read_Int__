@@ -23,7 +23,7 @@ private static int readInt() throws IOException
     return isNegative ? -a : a;
 }
 
-private static int readInt() throws IOException
+static int readInt() throws IOException
 {
     int c, num = 0;
     boolean neg = false;
