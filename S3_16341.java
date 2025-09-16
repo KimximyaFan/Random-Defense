@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class _16341
+public class S3_16341
 {
     public static void main (String[] args) throws IOException
     {
