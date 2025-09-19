@@ -5,8 +5,17 @@ public class _
 {
     public static void main (String[] args) throws IOException
     {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        StringTokenizer st;
+    }
+
+    static int readInt() throws IOException
+    {
+        int c, num = 0;
+        boolean neg = false;
+        while ((c = System.in.read()) <= 32);
+        if (c == '-') { neg = true; c = System.in.read(); }
+        do { num = (num << 3) + (num << 1) + (c & 15); } 
+        while ((c = System.in.read()) >= '0' && c <= '9');
+        return neg ? -num : num;
     }
 }
