@@ -6,6 +6,31 @@ public class _temp
     public static void main (String[] args) throws IOException
     {
         StringBuilder sb = new StringBuilder();
+        
+        int A = readInt();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int i=1; i<=A; i++)
+        {
+            int a = 30;
+            int k = i+1;
+
+            while ( true )
+            {
+                if ( a - k <= 0)
+                    break;
+
+                a -= k;
+            }
+
+            if ( a > i )
+                result.add(i);
+        }
+
+        for (Integer i : result)
+            sb.append(i).append("\n");
+
+        System.out.print(sb);
     }
 
     static int readInt() throws IOException
